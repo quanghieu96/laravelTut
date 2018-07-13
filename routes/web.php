@@ -16,4 +16,5 @@ Route::get('/about', 'PagesController@about');
 Route::get('/master', 'PagesController@master');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/home', 'PagesController@home');
+Route::get('/contact', 'TicketsController@create');
 

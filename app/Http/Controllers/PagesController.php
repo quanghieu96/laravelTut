@@ -14,8 +14,10 @@ class PagesController extends Controller
         return view('about');
     }
     public function contact(){
-        return view('contact');
-    }public function master(){
+        return view('ticket.create');
+    }
+    public function master(){
         return view('master');
     }
+
 }
