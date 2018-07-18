@@ -24,6 +24,8 @@ Route::get('/ticket/{slug?}/edit','TicketsController@edit');
 Route::post('/ticket/{slug?}/edit','TicketsController@update');
 Route::post('/ticket/{slug?}/delete','TicketsController@destroy');
 Route::post('/comment', 'CommentsController@newComment');
+Route::get('users/register', 'Auth\RegisterController@showRegistrationForm');
+Route::post('users/register', 'Auth\RegisterController@register');
 
 Route::get('sendemail', function () {
 
@@ -42,3 +44,7 @@ Route::get('sendemail', function () {
     return "Your email has been sent successfully";
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
